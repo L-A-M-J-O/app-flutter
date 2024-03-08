@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/qr_image.dart';
 import 'package:flutter_application_1/pages/qr_scaner.dart';
+import 'package:flutter_application_1/pages/qr_sunmi.dart';
 
 class QRCode extends StatefulWidget {
   @override
@@ -42,6 +43,9 @@ class _QRCodeState extends State<QRCode> {
                       builder: (context) => const QRScaner()));
             },
             child: const Text('Scan QR Code')),
+        ElevatedButton(onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const QRSunmi()));
+        },  child: const Text('Sunmi'))
       ]),
     );
   }

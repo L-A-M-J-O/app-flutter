@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   final dio = Dio();
 
   void getHttp() async {
-    final response = await dio.get('https://rickandmortyapi.com/api/character');
+    final response = await dio.get('https://api-dev.woutick.com/back/v1/account/login/');
     setState(() {
       human = response.data['results'];
     });
