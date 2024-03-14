@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/api_woutick.dart';
 import 'package:flutter_application_1/pages/qr_image.dart';
 import 'package:flutter_application_1/pages/qr_scaner.dart';
 import 'package:flutter_application_1/pages/qr_sunmi.dart';
@@ -45,7 +46,10 @@ class _QRCodeState extends State<QRCode> {
             child: const Text('Scan QR Code')),
         ElevatedButton(onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const QRSunmi()));
-        },  child: const Text('Sunmi'))
+        },  child: const Text('Sunmi')),
+        ElevatedButton(onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const ApiStandard()));
+        },  child: const Text('Woutick api'))
       ]),
     );
   }
