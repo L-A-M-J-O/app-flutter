@@ -53,6 +53,7 @@ class _ApiStandard extends State<ApiStandard> {
   @override
   void initState() {
     super.initState();
+    // Llama a makeRequestWithToken al iniciar el componente
     makeRequestWithToken();
   }
 
