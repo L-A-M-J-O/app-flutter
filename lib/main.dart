@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/qr_code.dart';
+import 'package:flutter_application_1/presentation/pages/login_page.dart';
+import 'package:flutter_application_1/providers/token_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (_) => TokenProvider(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Poppins'),
-      home: QRCode(),
+      home: LoginPage(),
     );
-  } 
+  }
 }
